@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "504712640553",
+    "firebase_url": "https://armmovies-b7821.firebaseio.com",
+    "project_id": "armmovies-b7821",
+    "storage_bucket": "armmovies-b7821.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504712640553:android:4fad30a9c77a684b",
+        "android_client_info": {
+          "package_name": "am.ArmMovies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504712640553-562nnft3r3gqnm8lmn6aaq932p6d0s75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY0vCwFJtZvrw1m9k_he21SR0-4gtMiY8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504712640553-562nnft3r3gqnm8lmn6aaq932p6d0s75.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

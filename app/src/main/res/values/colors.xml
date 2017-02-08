@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#A3021F</color>
+    <color name="colorPrimaryDark">#A3021F</color>
+    <color name="colorAccent">#A3021F</color>
+    <color name="title_layout_color">#A3021F</color>
+    <color name="textColor">#000000</color>
+    <color name="secondaryTextColor">#3d3d3d</color>
+
+    <!--dark theme colors -->
+    <color name="primaryColorDark">#BDBDBD</color>
+    <color name="dividerColorDarkTheme">#4b4b4b</color>
+    <color name="colorDarkThemePrimaryDark">#031621</color>
+    <color name="colorDarkThemePrimary">#042233</color>
+    <color name="colorAccent2">#2196F3</color>
+    <color name="textColorDarkTheme">#ffffff</color>
+    <color name="secondaryTextColorDarkTheme">#e0e1e2</color>
+
+</resources>
