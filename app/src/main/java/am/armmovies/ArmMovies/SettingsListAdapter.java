@@ -2,6 +2,8 @@ package am.armmovies.ArmMovies;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,8 +29,6 @@ public class SettingsListAdapter extends ArrayAdapter<String> {
         this.titles = titles;
         this.context = context;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-
     }
 
     @NonNull
@@ -58,8 +58,14 @@ public class SettingsListAdapter extends ArrayAdapter<String> {
                 break;
             case "Version":
                 title.setText(titles[position]);
-                subTitle.setText(ConstantsContainer.appVersion);
-                subTitle.setVisibility(View.VISIBLE);
+                try {
+                    PackageInfo packageInfo = context.getPackageManager()
+                            .getPackageInfo(context.getPackageName(), 0);
+                    subTitle.setText(packageInfo.versionName);
+                    subTitle.setVisibility(View.VISIBLE);
+                } catch (PackageManager.NameNotFoundException e) {
+                    e.printStackTrace();
+                }
                 break;
             default:
                 title.setText(titles[position]);

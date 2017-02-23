@@ -5,7 +5,6 @@ package am.armmovies.ArmMovies;
  */
 
 public class ConstantsContainer {
-    public static final String appVersion = "1.0.0";
     public static final String YouTube_API_KEY = "AIzaSyCQK4SpfC2Y3zbVZ-EAnOsKakG_oYwfdF4";
     public static final String server = "https://arm-movies.herokuapp.com";
     public static final String serverPort = "80";

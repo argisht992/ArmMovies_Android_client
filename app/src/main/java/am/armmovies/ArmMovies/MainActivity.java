@@ -19,10 +19,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.nostra13.universalimageloader.utils.L;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements JsonListener,

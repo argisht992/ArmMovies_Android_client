@@ -16,8 +16,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -43,20 +42,11 @@ public class DetailedActivity extends YouTubeBaseActivity implements
     private boolean runRevealAnimation = false;
     private String currentOrientation = null;
 
-    private AdView mAdView = null;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed);
         //setTheme(R.style.AppTheme_Dark);
-        mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("5AA3A76A5B2A04D8BAF7F46C4F062A02")
-                .addTestDevice("77F11E42D57C812C35B91FAB2F983C79")
-                .build();
-        mAdView.loadAd(adRequest);
         title = (TextView) findViewById(R.id.title_detailed);
         year = (TextView) findViewById(R.id.year_detailed);
         rate = (TextView) findViewById(R.id.rate_detailed);
@@ -290,11 +280,15 @@ public class DetailedActivity extends YouTubeBaseActivity implements
 
     @Override
     public void onBackPressed() {
-        if(currentOrientation.equals("landscape")) {
+        try {
+            if (currentOrientation.equals("landscape")) {
 //            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            youTubePlayer.setFullscreen(false);
-        }
-        else {
+                youTubePlayer.setFullscreen(false);
+            } else {
+                super.onBackPressed();
+            }
+        } catch (Exception e) {
+            //for TV
             super.onBackPressed();
         }
     }
@@ -353,5 +347,4 @@ public class DetailedActivity extends YouTubeBaseActivity implements
 
         }
     }
-
 }
